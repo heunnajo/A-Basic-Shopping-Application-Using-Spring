@@ -9,7 +9,7 @@ public class RateDiscountPolicy implements DiscountPolicy{
     public int discount(Member member, int price) {
         //enum 타입의 비교는 ==
         if(member.getGrade() == Grade.VIP){
-            return discountPercent / 100;
+            return price * discountPercent / 100;
         } else{
             return 0;
         }
