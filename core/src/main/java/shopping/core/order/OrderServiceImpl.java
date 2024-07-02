@@ -24,5 +24,8 @@ public class OrderServiceImpl implements OrderService{
         int discountPrice = discountPolicy.discount(member, itemPrice); //할인에 대해서는 discountPolicy 에 위임하고 리턴값만 받는다 : 단일 책임 원칙을 지켜서 설계를 잘 했다!
         return new Order(memberId,itemName,itemPrice,discountPrice);
     }
-
+    //테스트 용도
+    public MemberRepository getMemberRepository(){
+        return memberRepository;
+    }
 }
